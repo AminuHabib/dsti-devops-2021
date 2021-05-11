@@ -16,6 +16,9 @@ spec:
     spec:
       volumes:
         # TODO complete
+        - name: cache-volume
+          emptyDir: {}
+          
       containers:
       - name: nginx-container
         image: nginx
@@ -24,3 +27,4 @@ spec:
             name: "http-server"
         volumeMounts:
           # TODO complete
+          mountPath: /cache
