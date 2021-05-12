@@ -1,5 +1,5 @@
 
-# Cloud-native applications
+# Cloud-native applications. Microservice architecture | with Istio
 
 Cloud-native is a term used to describe container-based environments. Cloud-native technologies are used to develop applications built with services packaged in containers, deployed as microservices, and managed on elastic infrastructure through agile DevOps processes and continuous delivery workflows.
 

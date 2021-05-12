@@ -25,12 +25,7 @@ minikube start
 minikube status
 ```
 
-4. Clone the lab repository to your computer:
-
-```
-git clone https://github.com/adaltas/ece-devops-2020-fall.git
-cd ece-devops-2020-fall/modules/8-storage-in-kubernetes/
-```
+4. Clone the current Git repository and go to the [lab `assets/`](assets/).
 
 ## 1. Use `emptyDir` storage
 

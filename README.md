@@ -22,8 +22,8 @@ For the DevOps course, it is required:
 
 5. [Containerization | with Docker](modules/05.docker-containers)
 6. [Containers orchestration | with Kubernetes](modules/06.container-orchestration)
-7. [Cloud-native applications, Microservices & Service mesh | with Istio](modules/07.cloud-native)
-8. Monitoring
+7. [Cloud-native applications. Microservice architecture | with Istio](modules/07.cloud-native)
+8. [Monitoring | with Prometheus and Grafana](modules/08.monitoring)
 
 
 ## Structure of modules
