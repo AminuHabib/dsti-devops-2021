@@ -2,21 +2,21 @@
 
 ## Deadline
 
-... will be set
+Will be set...
 
 ## Opportunities
 
 1. The DevOps project is based on all of the labs passed during the course, it is allowed to use them.
 
-2. Work on the project can be carried out by 1 student or a team of 2 students.
+2. Work on the project can be carried out by 1 student.
 
-3. You are allowed to collaborate with students from another group.
+3. You are allowed to collaborate with other students.
 
 ## Instructions
 
 ### 1. Create a web application
 
-Create a web application on any programming language (NodeJS, Java, Ruby, Python etc.), storing data in a database (Redis, MongoDB, MySQL, ...) and cover it with tests of different levels.
+Create a web application on any programming language (NodeJS, Java, Ruby, Python, etc.), storing data in a database (Redis, MongoDB, MySQL, ...) and cover it with tests of different levels.
 
 **Are proposed:**
 
@@ -24,18 +24,18 @@ Create a web application on any programming language (NodeJS, Java, Ruby, Python
 - storage in Redis database
 - tests: unit, API, configuration, connection.
 
-**Note!** You are allowed to use the draft application located in the [assets/userapi](modules/4-continuous-testing/assets/userapi) folder, but you have to enrich it by at least completing all comment sections marked "TODO".
+**Note!** You are allowed to use the draft application located in the [modules/04.ct-ci-cd/assets/userapi](modules/04.ct-ci-cd/assets/userapi) folder, but you have to enrich it by at least completing all comment sections marked "TODO".
 
 ### 2. Apply CI/CD pipeline 
 
-Configure and apply CI/CD (including deployment) pipeline using any platforms (GitLab CI/CD, Jenkins, Travis CI, Netlify, Heroku etc.).
+Configure and apply CI/CD (including deployment) pipeline using any platforms (GitHub Actions, GitLab CI/CD, Jenkins, Netlify, Heroku, etc.).
 
-**Note!** If the chosen deployment platform (like Heroku) requires a subscription to make use of their database service to connect to your app, then you can skip using this service. In this case you application won't be running properly, but it must successfully display the homepage. 
+**Note!** If the chosen deployment platform (like Heroku) requires a subscription to make use of their database service to connect to your app, you can skip using this service. In this case, your application won't be running properly, but it must successfully display the homepage. 
 
-### 3. Configure and provision a virtual environment and run your application using IaC approach
+### 3. Configure and provision a virtual environment and run your application using the IaC approach
 
 1. Configure with Vagrant: 1 VM running on any Linux distribution 
-2. Provision the VM with Ansible, that includes installing and running:
+2. Provision the VM with Ansible, which includes installing and running:
   - language runtime
   - database
   - your application (use [sync folders](https://www.vagrantup.com/docs/synced-folders))
@@ -43,7 +43,7 @@ Configure and apply CI/CD (including deployment) pipeline using any platforms (G
 
 ### 4. Build Docker image of your application
 
-1. Create Docker image of your application
+1. Create a Docker image of your application
 2. Push the image to Docker Hub
 
 **Note!** You must [ignore](https://docs.docker.com/engine/reference/builder/#dockerignore-file) all the files and folders that do not need to be included in the image.
@@ -55,7 +55,7 @@ Configure and apply CI/CD (including deployment) pipeline using any platforms (G
 ### 6. Make docker orchestration using Kubernetes
 
 1. Install Kubernetes cluster using Minikube
-2. Create Kubernetes Manifest yaml files:
+2. Create Kubernetes Manifest YAML files:
   - deployments
   - services
   - persistent volume and persistent volume claim
@@ -66,27 +66,48 @@ Configure and apply CI/CD (including deployment) pipeline using any platforms (G
 2. Create configuration:
   - route requests between 2 different versions of your app
   - traffic shifting between 2 different versions of your app
+  
+### 8. Implements Monitoring to your containerized application
 
-### 8. Describe your project in the `README.md` file
+1. Install Prometheus and Grafana to your K8s cluster
 
-1. List of all the work performed (briefly, describing features and bonus tasks).
+2. Set up monitoring with Prometheus:
 
-2. Instructions:
-  - Installation
-  - Usage
-  - Testing
+  - Prometheus should contact the application (eg. homepage) and pull its status
+  - You should be able to see the status of the application on Prometheus
+
+3. Set up monitoring with Grafana:
+
+  - Link it to the Prometheus server and display the monitored applications
+  - Create alerts and trigger them by shutting down your applications.
+
+> Note. You can imagine something different and set up monitoring (eg. memory usage, CPU time, ...)
+
+### 9. Document your project 
+
+Write a sort of report in the `README.md` file which includes the following:
+
+1. List all the work performed (briefly, describing features and bonus tasks).
+
+2. Screenshots (pictures of your screen when you are running a web page, K8s resources, VMs, etc... Provide maximum screenshots)
+
+> Tip. Keep screenshots in a separate folder. Ex.: see how pictures are linked in the `index.md` files of the modules.
+
+3. Provide instructions (commands) of how to:
+  - Install (or prepare environment)
+  - Use (your application, run your Docker container or Docker Compose cluster, on K8s cluster, ...)
+  - Test (your application)
   
 4. All the necessary links with the platforms and tools integrated:
-  - Travis CI
   - Heroku
   - Docker Hub
   - ...
   
-4. Author
+5. Author
 
-5. Other additional info that you want to include
+6. Other additional info that you want to include...
 
-**Note!** Use correct Markdown syntax to keep your `README.md` file looking good.
+> **Note!** Use the correct Markdown syntax to keep your `README.md` file looking good.
 
 ## Structure
 
@@ -101,6 +122,7 @@ iac/
   playbooks/
 k8s/
 istio/
+image/
 README.md
 CHANGELOG.md
 Dockerfile
@@ -111,26 +133,26 @@ Dockerfile
 
 ## How to get bonuses?
 
-Every initiative will be counted. 
+Every initiative will be counted, just don't forget to describe it in your `README.md`.
 
 List of bonus tasks proposed:
 
-1. Use different tools and platforms instead of what has been passed in the labs, for example: GitLab CI/CD, Netlify, etc.
-2. Use different language (Java, Ruby, Python etc.) to develop the application
-3. If you use the NodeJS application provided in [assets](assets) folder, bring it with additional features:
+1. Use different tools and platforms instead of what has been passed in the labs, for example, GitLab CI/CD, Netlify, etc. This will give you a bigger overview of technologies.
+2. Use different languages (Java, Ruby, Python, etc.) to develop the application of part 1.
+3. If you use the NodeJS application provided in the [modules/04.ct-ci-cd/assets/userapi](modules/04.ct-ci-cd/assets/userapi) folder, bring it with additional features:
   - more different API methods
   - more different unit/functional/integration tests
   - using another database (like MongoDB, MySQL, ...)
-  - integrate to your source code a documenting package, for example, [Swagger UI](https://www.npmjs.com/package/express-swagger-generator)
-4. Any number Kubernetes tasks from [this list](https://kubernetes.io/docs/tasks/). 
+  - integrate a documenting package to your source code, for example, [Swagger UI](https://www.npmjs.com/package/express-swagger-generator)
+4. Any Kubernetes tasks from [this list](https://kubernetes.io/docs/tasks/). 
 5. [Securing microservice communication](https://istio.io/latest/docs/tasks/security/) or with Istio 
 6. Etc. 
 
 ## How to send a project for evaluation?
 
-**ATTENTION!** Make sure your repository is **PRIVATE** and **you have sent an invitation** to GitHub account - https://github.com/sergkudinov. Otherwise, **if it isn't PRIVATE the final grade will be reduced to 0**.
+1. **ATTENTION!** Make sure your repository is **PRIVATE** and **you have sent an invitation** to teacher's GitHub account - https://github.com/sergkudinov. Otherwise, **if it isn't PRIVATE the final grade will be reduced to 0**.
 
-After you have sent the invitation, send an email to [sergei@adaltas.com](mailto:sergei@adaltas.com) containing following:
+2. After you have sent the invitation, send an email to [sergei@adaltas.com](mailto:sergei@adaltas.com) containing the following:
 
   - **Subject format:** "ECE - DevOps project - \<LASTNAME Firstname\> - \<Group number (ex: SI03)\>"
   - **Message:**
@@ -145,9 +167,10 @@ After you have sent the invitation, send an email to [sergei@adaltas.com](mailto
 | Continuous Integration and Continuous Delivery (and Deployment) |   CICD    |    +3     |
 | Containerisation with Docker                                    |   D       |    +1     |
 | Orchestration with Docker Compose                               |   DC      |    +2     |
-| Orchestration with Kubernetes	                                  |   KUB     |    +4     |
+| Orchestration with Kubernetes	                                  |   KUB     |    +3     |
 | Service mesh using Istio                                        |   IST     |    +2     |
-| Infrastructure as code using Ansible                            |   IAC     |    +4     |
+| Infrastructure as code using Ansible                            |   IAC     |    +3     |
+| Monitoring                                                      |   MON     |    +2     |
 | Accurate project documentation in README.md file                |   DOC     |    +3     |
 | Each bonus tasks                                                |   BNS     |    +1     |
 | Each penalty                                                    |   PNL     |    -1     |
@@ -155,5 +178,5 @@ After you have sent the invitation, send an email to [sergei@adaltas.com](mailto
 It is also taken into account:
 
 - richness of the commit history
-- accuracy and purity of the project (descriptions, source code, files)
-- activity in during course sessions
+- accuracy and purity of the project (descriptions, source code, files structure)
+- activity during course sessions
