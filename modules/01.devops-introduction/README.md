@@ -23,7 +23,7 @@ As result, you will achieve creation a documented project on NodeJS of a simple 
 - macOS or Linux: use Terminal
 - Windows: use Git Bash (should be installed when installing Git). Note! Don't use default CMD.exe, because it has different commands from a command line of the Linux OS, which is used in most IT environments.
 
-## Start a project
+## 1. Start a project
 Note! Don't put spaces ( ) ether in folder names either in file names. Otherwise, you will have to use escape characters when navigating to them. Use the "kebab-case" naming convention by separating words with dashes (-).
 
 1. Using CLI bash commands in your terminal (Terminal or Git Bash) navigate to the directory where you will store your project folder.
