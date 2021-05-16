@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Aminu Habib Abiola",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
