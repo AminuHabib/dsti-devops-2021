@@ -41,14 +41,13 @@ The materials are contained in the Markdown files in the [modules](modules) fold
 
 The course assignment is consist of:
 
-- a project
-- an exam (multiple choice questions)
+1. Project   
+  See the [project description](PROJECT.md).
 
-The description will be provided at the end of the course.
-
-## Exam
-
-Will be provided at the end of the course.
+2. MCQ exam (multiple choice questions)   
+  The exam will contain around 30 questions with multiple choice and you will have 45-60 mins to complete your answers. It will be made of 2 parts:
+  - 1) ~15 theory questions(based on the materials on GitHub and slides from the blackboard)
+  - 2) ~15 practical questions (knowledge on using CLI tools such as `git`, `docker`, `kubectl`, etc...)
 
 ## Author
 
